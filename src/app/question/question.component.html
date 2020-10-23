@@ -1,0 +1,7 @@
+<div *ngIf="currentQuestionIndex === questionIndex">
+    <p>{{question.title}}</p>
+    <select [(ngModel)]="userAnswer">
+        <option *ngFor="let answer of question.answers" [value]="answer">{{answer}}</option>
+    </select>
+    <button (click)="next()">Next</button>
+</div>
